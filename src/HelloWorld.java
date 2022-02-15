@@ -1,4 +1,5 @@
 public class HelloWorld {
+//    renaming this class will result in an error because the file name and class must be the same.
     public static void main(String[] args) {
         System.out.print("Hello, ");
         System.out.println("World!");
