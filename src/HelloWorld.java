@@ -32,28 +32,28 @@ public class HelloWorld {
 //        this will not work because class is reserved in the naming convention for methods.
         String theNumberThree = "three";
         Object o = theNumberThree;
-/*
-        int three = (int) o;
-        I expect this to print out the string "three"
-        System.out.println(o);
-        Exception in thread "main" java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
-        at HelloWorld.main(HelloWorld.java:34)
-        int three = (int) "three";
-        this isn't much different as the string "three" was already being assigned to Object o.  Both blocks of code attempt to cast a String to an Integer.
-        int x = 4;
-       x += 5;
-       System.out.println(x);
-        int x = 3;
-        int y = 4;
-        y *= x;
-        System.out.println(y);
-*/
-        int x = 10;
-        int y = 2;
-        x /= y;
-        y -= x;
-        System.out.println(x);
-        System.out.println(y);
+
+//        int three = (int) o;
+//        I expect this to print out the string "three"
+//        System.out.println(o);
+//        Exception in thread "main" java.lang.ClassCastException: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+//        at HelloWorld.main(HelloWorld.java:34)
+//        int three = (int) "three";
+//        this isn't much different as the string "three" was already being assigned to Object o.  Both blocks of code attempt to cast a String to an Integer.
+//        int x = 4;
+//       x += 5;
+//       System.out.println(x);
+//        int x = 3;
+//        int y = 4;
+//        y *= x;
+//        System.out.println(y);
+
+//        int x = 10;
+//        int y = 2;
+//        x /= y;
+//        y -= x;
+//        System.out.println(x);
+//        System.out.println(y);
 //        Trying to initialize a variable N with value Integer.MAX_VALUE + 1 results in N = -2147483648
 //        Trying to initialize a variable N with value Integer.MIN_VALUE - 1 results in N = 2147483647
 // java will wrap an over incremented or decremented value to the negative/opposite sign value i.e.

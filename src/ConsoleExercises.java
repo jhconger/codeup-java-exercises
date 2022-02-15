@@ -30,5 +30,6 @@ public class ConsoleExercises {
 //        this returns the first word of the sentence.
         string4 = string.nextLine();
         System.out.println("You entered: --> \"" + string4 + "\" <--");
+
     }
 }
