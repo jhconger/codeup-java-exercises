@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        int i = 5;
@@ -54,15 +55,35 @@ public class ControlFlowExercises {
 //    }
 
 
-    for (int i = 1; i <= 100; i++) {
-        if (i%15 == 0)
-            System.out.println("FizzBuzz");
-        else if (i%3 == 0)
-            System.out.println("Fizz");
-        else if (i%5 == 0)
-            System.out.println("Buzz");
-        else
-            System.out.println(i);
+//    for (int i = 1; i <= 100; i++) {
+//        if (i%15 == 0)
+//            System.out.println("FizzBuzz");
+//        else if (i%3 == 0)
+//            System.out.println("Fizz");
+//        else if (i%5 == 0)
+//            System.out.println("Buzz");
+//        else
+//            System.out.println(i);
+//        }
+//    }
+        Scanner scanner = new Scanner(System.in);
+        String choice = "y";
+        while (choice.equalsIgnoreCase("y")) {
+            System.out.println("Enter an Integer: ");
+            int integerNext = scanner.nextInt(6);
+            System.out.println("Number" + "  " + "Squared" + "  " + "Cubed");
+            System.out.println("======" + "  " + "======" + "  " + "======");
+            System.out.println("Enter an integer: ");
+            for (int i = 1; i <= integerNext; i++) {
+                int numberSquared = (int) Math.pow(i, 2);
+                int numberCubed = (int) Math.pow(i, 3);
+                String message = "\n" + i + "       " + numberSquared + "       " + numberCubed;
+                System.out.print(message);
+            }
+            System.out.print("\nContinue? (y/n): ");
+            choice = scanner.next();
+            System.out.println();
+
         }
     }
 }
