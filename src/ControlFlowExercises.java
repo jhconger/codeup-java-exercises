@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.*;
+import static java.lang.System.out;
+import java.io.BufferedReader;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        int i = 5;
@@ -66,24 +69,57 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 //    }
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//        String choice = "y";
+//        while (choice.equalsIgnoreCase("y")) {
+//            System.out.println("Enter an Integer: ");
+//            int integerNext = scanner.nextInt(6);
+//            System.out.println("Number" + "  " + "Squared" + "  " + "Cubed");
+//            System.out.println("======" + "  " + "=======" + "  " + "=====");
+//            System.out.println("Enter an integer: ");
+//            for (int i = 1; i <= integerNext; i++) {
+//                int numberSquared = (int) Math.pow(i, 2);
+//                int numberCubed = (int) Math.pow(i, 3);
+//                String message = "\n" + i + "       " + numberSquared + "       " + numberCubed;
+//                System.out.print(message);
+//            }
+//            System.out.print("\nContinue? (y/n): ");
+//            choice = scanner.next();
+//            System.out.println();
+//
+//        }
+//    }
+        Scanner grades = new Scanner(System.in);
+        int x = 0;
         String choice = "y";
         while (choice.equalsIgnoreCase("y")) {
-            System.out.println("Enter an Integer: ");
-            int integerNext = scanner.nextInt(6);
-            System.out.println("Number" + "  " + "Squared" + "  " + "Cubed");
-            System.out.println("======" + "  " + "=======" + "  " + "=====");
-            System.out.println("Enter an integer: ");
-            for (int i = 1; i <= integerNext; i++) {
-                int numberSquared = (int) Math.pow(i, 2);
-                int numberCubed = (int) Math.pow(i, 3);
-                String message = "\n" + i + "       " + numberSquared + "       " + numberCubed;
-                System.out.print(message);
-            }
+            System.out.println("Entre a numeric grade between 0 and 100: ");
+            x = grades.nextInt();
+            if (x >= 0 && x <= 100)
+                if (x <= 100 && x >= 96) {
+                    System.out.println("A+");
+                } else if (x <= 95 && x >= 92) {
+                    System.out.println("A");
+                } else if (x <= 91 && x >= 90) {
+                    System.out.println("A-");
+                } else if (x <= 89 && x >= 86) {
+                    System.out.println("B+");
+                } else if (x <= 85 && x >= 80) {
+                    System.out.println("B");
+                } else if (x <= 79 && x >= 76) {
+                    System.out.println("C+");
+                } else if (x <= 75 && x >= 70) {
+                    System.out.println("C");
+                } else if (x <= 69 && x >= 66) {
+                    System.out.println("D+");
+                } else if (x <= 65 && x >= 60) {
+                    System.out.println("D");
+                } else if (x <= 59 && x >= 0) {
+                    System.out.println("F");
+                }
             System.out.print("\nContinue? (y/n): ");
-            choice = scanner.next();
+            choice = grades.next();
             System.out.println();
-
+            }
         }
     }
-}
