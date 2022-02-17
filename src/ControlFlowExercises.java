@@ -72,7 +72,7 @@ public class ControlFlowExercises {
             System.out.println("Enter an Integer: ");
             int integerNext = scanner.nextInt(6);
             System.out.println("Number" + "  " + "Squared" + "  " + "Cubed");
-            System.out.println("======" + "  " + "======" + "  " + "======");
+            System.out.println("======" + "  " + "=======" + "  " + "=====");
             System.out.println("Enter an integer: ");
             for (int i = 1; i <= integerNext; i++) {
                 int numberSquared = (int) Math.pow(i, 2);
