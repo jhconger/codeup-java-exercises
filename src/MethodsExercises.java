@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class MethodsExercises {
     public static void main(String[] args) {
         multiply(2, 6);
@@ -60,4 +61,40 @@ public class MethodsExercises {
         System.out.println(x % y);
         return x % y;
     }
-}
+
+
+    //    Create a method that validates that user input is in a certain range
+//
+//        The method signature should look like this:
+//
+
+    public static int getInteger(int min, int max) {
+
+        System.out.println("Enter an Integer value ");
+        min = 1;
+        max = 10;
+
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNextInt()) {
+            getInteger(min, max) = sc.nextInt();
+            if (get > 0)
+                System.out.println("You entered a positive integer " + userInput);
+            else {
+                System.out.println("You entered a negative integer " + userInput);
+            }
+        } else {
+            System.out.println("Please Enter Valid Integer");
+        }
+        return userInput;
+    }
+
+
+
+
+
+
+
+
+
+
+
