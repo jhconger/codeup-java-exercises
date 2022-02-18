@@ -6,7 +6,7 @@ public class MethodsExercises {
         subtract(12, 6);
         divide(50, 10);
         modulus(2, 2);
-
+        getInteger(1,10);
     }
 
     public static int add(int x, int y) {
@@ -63,31 +63,21 @@ public class MethodsExercises {
     }
 
 
-    //    Create a method that validates that user input is in a certain range
-//
-//        The method signature should look like this:
-//
-
     public static int getInteger(int min, int max) {
-
-        System.out.println("Enter an Integer value ");
-        min = 1;
-        max = 10;
-
-        Scanner sc = new Scanner(System.in);
-        if (sc.hasNextInt()) {
-            getInteger(min, max) = sc.nextInt();
-            if (get > 0)
-                System.out.println("You entered a positive integer " + userInput);
-            else {
-                System.out.println("You entered a negative integer " + userInput);
-            }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number between 1 and 10: ");
+        int userNum = scanner.nextInt();
+        if (userNum < 1) {
+            System.out.println("Your number is too low. Let's go higher.");
+            return getInteger(min, max);
+        } else if (userNum > 10) {
+            System.out.println("Your number is too high. Let's go lower.");
+            return getInteger(min, max);
         } else {
-            System.out.println("Please Enter Valid Integer");
+            return userNum;
         }
-        return userInput;
     }
-
+}
 
 
 
