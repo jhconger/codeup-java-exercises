@@ -7,7 +7,7 @@ public class MethodsExercises {
 //        divide(50, 10);
 //        modulus(2, 2);
 ////        getInteger(1, 10);
-        factor(8);
+//        factor(8);
     }
 //
 //    public static int add(int x, int y) {
@@ -96,29 +96,32 @@ public class MethodsExercises {
 ////    }
 ////}
 
+//
+//    public static void factor(int myNum) {
+//        int result = factorial(myNum);
+//        System.out.println(result);
+//    }
 
-    public static void factor(int myNum) {
-        int result = factorial(myNum);
-        System.out.println(result);
-    }
 
-    public static int factorial(int myNum) {
+    static {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter an integer between 1 and 10: ");
-        myNum = scanner.nextInt();
         String choice = "y";
         while (choice.equalsIgnoreCase("y")) {
-            if (myNum == 0)
-                return 1;
-            else
-                return (myNum * factorial(myNum - 1));
+            System.out.println("Enter a number between 1 and 10: ");
+        int i = 0;
+        long factorial = 1;
+            int num = scanner.nextInt();
+            for ( i = 1; i <= num; ++i) {
+                // factorial = factorial * i;
+                factorial *= i;
+            }
+            System.out.printf("Factorial of %d = %d", num, factorial);
+            System.out.print("\nContinue? (y/n): ");
+            choice = scanner.next();
+            System.out.println();
         }
-        System.out.print("\nContinue? (y/n): ");
-        choice = scanner.next();
-        return 0;
     }
 }
-
 
 
 
