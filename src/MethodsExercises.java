@@ -78,47 +78,32 @@ public class MethodsExercises {
 ////            return userNum;
 ////        }
 ////    }
-//
-////    public static int factorial(int i) {
-////        Scanner scanner = new Scanner(System.in);
-////        System.out.println("Enter a number between 1 and 10: ");
-////        String choice = "y";
-////        while (choice.equalsIgnoreCase("y")) {
-////            System.out.println("Enter an integer between 1 and 10: ");
-////
-////            int myNum = scanner.nextInt();
-////            if (myNum == 0)
-////                return 1;
-////            else
-////                return (myNum * factorial(myNum - 1));
-////        }
-////
-////    }
-////}
-
-//
-//    public static void factor(int myNum) {
-//        int result = factorial(myNum);
-//        System.out.println(result);
-//    }
 
 
     static {
         Scanner scanner = new Scanner(System.in);
         String choice = "y";
+
         while (choice.equalsIgnoreCase("y")) {
             System.out.println("Enter a number between 1 and 10: ");
-        int i = 0;
-        long factorial = 1;
             int num = scanner.nextInt();
-            for ( i = 1; i <= num; ++i) {
-                // factorial = factorial * i;
-                factorial *= i;
+            if (num < 1) {
+                System.out.println("Your number is too low. Let's go higher.");
+            } else if (num > 10) {
+                System.out.println("Your number is too high. Let's go lower.");
+            } else {
+                int i = 0;
+                long factorial = 1;
+
+                for (i = 1; i <= num; ++i) {
+                    // factorial = factorial * i;
+                    factorial *= i;
+                }
+                System.out.printf("Factorial of %d = %d", num, factorial);
+                System.out.print("\nContinue? (y/n): ");
+                choice = scanner.next();
+                System.out.println();
             }
-            System.out.printf("Factorial of %d = %d", num, factorial);
-            System.out.print("\nContinue? (y/n): ");
-            choice = scanner.next();
-            System.out.println();
         }
     }
 }
