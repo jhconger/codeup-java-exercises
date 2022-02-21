@@ -1,4 +1,6 @@
+import java.util.Random;
 import java.util.Scanner;
+import java.math.BigInteger;
 public class MethodsExercises {
     public static void main(String[] args) {
 //        multiply(2, 6);
@@ -79,39 +81,71 @@ public class MethodsExercises {
 ////        }
 ////    }
 
+//
+//    static {
+//        Scanner scanner = new Scanner(System.in);
+//        String choice = "y";
+//
+//        while (choice.equalsIgnoreCase("y")) {
+//            System.out.println("Enter a number between 1 and 20: ");
+//            int num = scanner.nextInt();
+//            if (num < 1) {
+//                System.out.println("Your number is too low. Let's go higher.");
+//            } else if (num > 20) {
+//                System.out.println("Your number is too high. Let's go lower.");
+//            } else {
+//                int i = 0;
+//                long factorial = 1;
+//
+//                for (i = 1; i <= num; ++i) {
+//                    // factorial = factorial * i;
+//                    factorial *= i;
+//                }
+//                System.out.printf("Factorial of %d = %d", num, factorial);
+//                System.out.print("\nContinue? (y/n): ");
+//                choice = scanner.next();
+//                System.out.println();
+//            }
+//        }
+//    }
 
-    static {
+
+
+//
+//    Create an application that simulates dice rolling.
+//
+//        Ask the user to enter the number of sides for a pair of dice.
+//        Prompt the user to roll the dice.
+//        "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+//        Use static methods to implement the method(s) that generate the random numbers.
+//        Use the .random method of the java.lang.Math class to generate random numbers.
+
+
+     static  {
         Scanner scanner = new Scanner(System.in);
-        String choice = "y";
+        Random rand = new Random();
+        boolean keepRolling = true;
+         String choice = "y";
+         System.out.println("Enter the number of sides for your pair of dice:");
+         int sides = scanner.nextInt();
 
-        while (choice.equalsIgnoreCase("y")) {
-            System.out.println("Enter a number between 1 and 10: ");
-            int num = scanner.nextInt();
-            if (num < 1) {
-                System.out.println("Your number is too low. Let's go higher.");
-            } else if (num > 10) {
-                System.out.println("Your number is too high. Let's go lower.");
+        do {
+            System.out.println("Would you like to roll your dice? (y/n): ");
+            if (scanner.next().equalsIgnoreCase("y")) {
+//                int n = rand.nextInt(sides * 2);
+//                this resulted in rolls of 1 or 0 sometimes which is not possible with di.
+                int dice1=(int)(Math.random()*sides+1);
+                int dice2=(int)(Math.random()*sides+1);
+                int sum= dice1 + dice2;
+                System.out.println("You rolled " + sum);
             } else {
-                int i = 0;
-                long factorial = 1;
-
-                for (i = 1; i <= num; ++i) {
-                    // factorial = factorial * i;
-                    factorial *= i;
-                }
-                System.out.printf("Factorial of %d = %d", num, factorial);
-                System.out.print("\nContinue? (y/n): ");
-                choice = scanner.next();
-                System.out.println();
+                System.out.println("Let's play again sometime.");
+                keepRolling = false;
             }
-        }
-    }
+        } while(keepRolling);
+                choice = scanner.next();
+     }
 }
-
-
-
-
-
 
 
 
