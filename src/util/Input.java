@@ -3,7 +3,7 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private  Scanner scanner;
+    private Scanner scanner;
 
     public Input() {
         scanner = new Scanner(System.in);
@@ -18,18 +18,17 @@ public class Input {
         String userInput = scanner.nextLine();
         return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("Y");
     }
-    public int getInt(int min, int max){
-        System.out.println("Enter a number in the range of " + min + " and " + max +": ");
-        int userNum = Integer.parseInt(getString());
 
-        try{
+    public int getInt(int min, int max) {
+        System.out.println("Enter a number in the range of " + min + " and " + max + ": ");
+        int userNum = Integer.parseInt(getString());
+        try {
             int parsedNum1 = userNum;
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println("That number is not in range. Try again.");
             return getInt(min, max);
         }
-
-        if(userNum < min || userNum > max){
+        if (userNum < min || userNum > max) {
             System.out.println("Try another number");
             getInt(min, max);
         }
@@ -49,25 +48,22 @@ public class Input {
 //        }
 //    }
 
-    int getInt(){
+    int getInt() {
         System.out.println("Enter a number without limits: ");
-        try{
+        try {
             return Integer.valueOf(getString());
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println("That isn't an acceptable number. Try again.");
             return getInt();
         }
-
     }
 
-
-    double getDouble(double min, double max){
-        System.out.println("Enter a double in the range of " + min + " and " + max + ": ");
+    double getDouble(double min, double max) {
+        System.out.println("Enter a double (number without decimals) in the range of " + min + " and " + max + ": ");
 //        double userDouble = scanner.nextDouble();
         double parsedNum = Double.valueOf(getString());
-
         try {
-            if(parsedNum < min || parsedNum > max) {
+            if (parsedNum < min || parsedNum > max) {
                 System.out.println("Try another number");
                 getDouble(min, max);
             }
@@ -76,21 +72,20 @@ public class Input {
             System.out.println("That is not an acceptable number. Try again.");
             return getDouble(min, max);
         }
-
-
     }
 
-    public double getDouble(){
+    public double getDouble() {
         System.out.println("Enter a double without limits: ");
 //        return scanner.nextDouble();
-        try{
+        try {
             return Double.valueOf(getString());
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println("That is not an acceptable double. Try again.");
             return getDouble();
         }
 
     }
+
     public static void main(String[] args) {
         System.out.println("enter a word: ");
         Input input = new Input();
