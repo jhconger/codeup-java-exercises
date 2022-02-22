@@ -8,11 +8,15 @@ public class Input {
     public Input() {
         this.scanner = new Scanner(System.in);
     }
-
     public String getString() {
         return scanner.nextLine();
     }
 
+    public String getString(String prompt) {
+//        prompt = ("Sup Dawg?");
+        System.out.println(prompt);
+        return scanner.nextLine();
+    }
     public boolean yesNo() {
         System.out.println("Enter yes or no!");
         String userInput = scanner.nextLine();
