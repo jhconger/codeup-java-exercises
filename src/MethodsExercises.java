@@ -82,32 +82,32 @@ public class MethodsExercises {
 ////    }
 
 //
-//    static {
-//        Scanner scanner = new Scanner(System.in);
-//        String choice = "y";
-//
-//        while (choice.equalsIgnoreCase("y")) {
-//            System.out.println("Enter a number between 1 and 20: ");
-//            int num = scanner.nextInt();
-//            if (num < 1) {
-//                System.out.println("Your number is too low. Let's go higher.");
-//            } else if (num > 20) {
-//                System.out.println("Your number is too high. Let's go lower.");
-//            } else {
-//                int i = 0;
-//                long factorial = 1;
-//
-//                for (i = 1; i <= num; ++i) {
-//                    // factorial = factorial * i;
-//                    factorial *= i;
-//                }
-//                System.out.printf("Factorial of %d = %d", num, factorial);
-//                System.out.print("\nContinue? (y/n): ");
-//                choice = scanner.next();
-//                System.out.println();
-//            }
-//        }
-//    }
+    static {
+        Scanner scanner = new Scanner(System.in);
+        String choice = "y";
+
+        while (choice.equalsIgnoreCase("y")) {
+            System.out.println("Enter a number between 1 and 20: ");
+            int num = scanner.nextInt();
+            if (num < 1) {
+                System.out.println("Your number is too low. Let's go higher.");
+            } else if (num > 20) {
+                System.out.println("Your number is too high. Let's go lower.");
+            } else {
+                int i = 0;
+                long factorial = 1;
+
+                for (i = 1; i <= num; ++i) {
+                    // factorial = factorial * i;
+                    factorial *= i;
+                }
+                System.out.printf("Factorial of %d = %d", num, factorial);
+                System.out.print("\nContinue? (y/n): ");
+                choice = scanner.next();
+                System.out.println();
+            }
+        }
+    }
 
 
 
