@@ -8,11 +8,9 @@ public class MethodsExercises {
 //        subtract(12, 6);
 //        divide(50, 10);
 //        modulus(2, 2);
-        getInteger(1, 10);
+//        getInteger(1, 10);
 //        factor(8);
     }
-
-    //
 //    public static int add(int x, int y) {
 //        System.out.println(x + y);
 //        return x + y;
@@ -23,14 +21,14 @@ public class MethodsExercises {
 //        return x - y;
 //    }
 //
-////    public static int multiply(int x, int y) {
-////        int result = 0;
-////        for (int i = 1; i <= y; i++) {
-////            result += x;
-////        }
-////        System.out.println(result);
-////        return result;
-////    }
+//    public static int multiply(int x, int y) {
+//        int result = 0;
+//        for (int i = 1; i <= y; i++) {
+//            result += x;
+//        }
+//        System.out.println(result);
+//        return result;
+//    }
 //
 //    static void multiply(int x, int y) {
 //        int result = product(x, y);
@@ -69,21 +67,21 @@ public class MethodsExercises {
 //
 //
 //
-    public static int getInteger(int min, int max) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 10: ");
-        int userNum = scanner.nextInt();
-        if (userNum < min) {
-            System.out.println("Your number is too low. Let's go higher.");
-            return getInteger(min, max);
-        } else if (userNum > max) {
-            System.out.println("Your number is too high. Let's go lower.");
-            return getInteger(min, max);
-        } else {
-            return userNum;
-        }
-    }
-}
+//    public static int getInteger(int min, int max) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter a number between 1 and 10: ");
+//        int userNum = scanner.nextInt();
+//        if (userNum < min) {
+//            System.out.println("Your number is too low. Let's go higher.");
+//            return getInteger(min, max);
+//        } else if (userNum > max) {
+//            System.out.println("Your number is too high. Let's go lower.");
+//            return getInteger(min, max);
+//        } else {
+//            return userNum;
+//        }
+//    }
+//}
 //        if (userNum < 1) {
 //            System.out.println("Your number is too low. Let's go higher.");
 //            return getInteger(min, max);
@@ -94,7 +92,6 @@ public class MethodsExercises {
 //            return userNum;
 //        }
 //    }
-
 //
 //    static {
 //        Scanner scanner = new Scanner(System.in);
@@ -122,9 +119,6 @@ public class MethodsExercises {
 //            }
 //        }
 //    }
-
-
-
 //
 //    Create an application that simulates dice rolling.
 //
@@ -133,43 +127,29 @@ public class MethodsExercises {
 //        "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
 //        Use static methods to implement the method(s) that generate the random numbers.
 //        Use the .random method of the java.lang.Math class to generate random numbers.
+        static {
+            Scanner scanner = new Scanner(System.in);
+            Random rand = new Random();
+            boolean keepRolling = true;
+            String choice = "y";
+            System.out.println("Enter the number of sides for your pair of dice:");
+            int sides = scanner.nextInt();
 
-
-//     static  {
-//        Scanner scanner = new Scanner(System.in);
-//        Random rand = new Random();
-//        boolean keepRolling = true;
-//         String choice = "y";
-//         System.out.println("Enter the number of sides for your pair of dice:");
-//         int sides = scanner.nextInt();
-//
-//        do {
-//            System.out.println("Would you like to roll your dice? (y/n): ");
-//            if (scanner.next().equalsIgnoreCase("y")) {
-////                int n = rand.nextInt(sides * 2);
-////                this resulted in rolls of 1 or 0 sometimes which is not possible with di.
-//                int dice1=(int)(Math.random()*sides+1);
-//                int dice2=(int)(Math.random()*sides+1);
-//                int sum= dice1 + dice2;
-//                System.out.println("You rolled " + sum);
-//            } else {
-//                System.out.println("Let's play again sometime.");
-//                keepRolling = false;
-////                break;
-//            }
-//        } while(keepRolling);
-//                choice = scanner.next();
-//
-//     }
-//}
-//
-
-
-
-
-
-
-
-
-
-
+            do {
+                System.out.println("Would you like to roll your dice? (y/n): ");
+                if (scanner.next().equalsIgnoreCase("y")) {
+//                int n = rand.nextInt(sides * 2);
+//                this resulted in rolls of 1 or 0 (sometimes which) is not possible with standard di.
+                    int dice1 = (int) (Math.random() * sides + 1);
+                    int dice2 = (int) (Math.random() * sides + 1);
+                    int sum = dice1 + dice2;
+                    System.out.println("You rolled " + sum);
+                } else {
+                    System.out.println("Let's play again sometime.");
+                    keepRolling = false;
+//                break;
+                }
+            } while (keepRolling);
+            choice = scanner.next();
+        }
+    }
