@@ -13,8 +13,6 @@ public class HighLow {
         while (true) {
             System.out.println("Please enter a number 0-100: "); // Changed from 1-100 because rand.nextInt(100)
             // returns a number between 0 and 99
-            // You can do  to make it between 1 and 100
-            // But put this in before the while loop starts
             int guess1 = scanner.nextInt();
 
             if(guess1 < correctNum){
