@@ -134,8 +134,7 @@ public class MethodsExercises {
             String choice = "y";
             System.out.println("Enter the number of sides for your pair of dice:");
             int sides = scanner.nextInt();
-
-            do {
+                do {
                 System.out.println("Would you like to roll your dice? (y/n): ");
                 if (scanner.next().equalsIgnoreCase("y")) {
 //                int n = rand.nextInt(sides * 2);
@@ -145,11 +144,11 @@ public class MethodsExercises {
                     int sum = dice1 + dice2;
                     System.out.println("You rolled " + sum);
                 } else {
-                    System.out.println("Let's play again sometime.");
+                    System.out.print("Let's play again sometime.");
                     keepRolling = false;
-//                break;
+
                 }
             } while (keepRolling);
-            choice = scanner.next();
+//            choice = scanner.next();
         }
     }
