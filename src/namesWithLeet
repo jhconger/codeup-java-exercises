@@ -1,0 +1,35 @@
+ public static ArrayList<User> namesWithLeet(ArrayList<User> users) {
+        ArrayList<User> list = new ArrayList<>();
+        for (User user : users) {
+            String firstName = user.getFirstName().replace('L', '1')
+                    .replace('l', '1')
+                    .replace('e', '3')
+                    .replace('E', '3')
+                    .replace('t', '7')
+                    .replace('T', '7');
+            String lastName = user.getLastName().replace('L', '1')
+                    .replace('l', '1')
+                    .replace('e', '3')
+                    .replace('E', '3')
+                    .replace('t', '7')
+                    .replace('T', '7');
+            user.setFirstName(firstName);
+            user.setLastName(lastName);
+            list.add(user);
+
+            System.out.println(user.getFirstName() + " " + user.getLastName());
+
+        }
+
+        return list;
+
+    }
+    public static void main(String[] args) {
+        ArrayList<User> list = new ArrayList<>();
+        User name1 = new User("Leslie", "Teslie", true);    User name2 = new User("Timmy", "Turner", false);
+        list.add(name1);
+        list.add(name2);
+       namesToLeet(list);
+    }
+
+}
